@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1742787555 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\main.cpp
+1742872445 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\main.cpp
 	<iostream>
 	<ctime>
 	"Capturas&Impresiones.h"
@@ -9,7 +9,7 @@
 
 1742786376 c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\capturas&impresiones.h
 
-1742786455 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\capturas&impresiones.cpp
+1742871979 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\capturas&impresiones.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -17,6 +17,7 @@
 	"MoverCursor.h"
 	"Capturas&Impresiones.h"
 	"VariablesGlobales.h"
+	"CapturaSegura.tpp"
 
 1742766137 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\movercursor.cpp
 	<windows.h>
@@ -25,7 +26,7 @@
 
 1742779413 c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\variablesglobales.h
 
-1742787546 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\ordenamientos.cpp
+1742872437 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\ordenamientos.cpp
 	<iostream>
 	"Capturas&Impresiones.h"
 	"VariablesGlobales.h"
@@ -34,7 +35,7 @@
 1742779413 source:c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\variabesglobales.cpp
 	"VariablesGlobales.h"
 
-1742787576 c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\ordenamientos.h
+1742872469 c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\ordenamientos.h
 
 1742786334 c:\datos\programación\c++\cursoprogramacion\tareassegundosemestre(notodas)\elordendelcaos\elordendelcaostarea\capturasegura.h
 

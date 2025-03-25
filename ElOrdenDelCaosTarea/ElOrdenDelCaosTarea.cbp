@@ -32,6 +32,16 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="CapturaSegura.h" />
+		<Unit filename="CapturaSegura.tpp" />
+		<Unit filename="Capturas&amp;Impresiones.cpp" />
+		<Unit filename="Capturas&amp;Impresiones.h" />
+		<Unit filename="MoverCursor.cpp" />
+		<Unit filename="MoverCursor.h" />
+		<Unit filename="Ordenamientos.cpp" />
+		<Unit filename="Ordenamientos.h" />
+		<Unit filename="VariabesGlobales.cpp" />
+		<Unit filename="VariablesGlobales.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

@@ -103,6 +103,7 @@ void insercion(int data[], int num) {
             b--;
         }
         data[b] = aux;
+        ImprimirHistograma(data,num);
     }
 }
 //****************************************************************************************************************
@@ -147,7 +148,72 @@ int Particion(int arreglo[], int primero, int ultimo,int n)
 
 }
 //****************************************************************************************************************
-void MergeSort(int arreglo[], int n)
+void MergeSort(int arreglo[],int primero,int ultimo, int num)
 {
+    if(primero<ultimo)
+    {
+        int ValorMedio=primero+(ultimo-primero)/2;
 
+        MergeSort(arreglo,primero,ValorMedio,num);//divide la izquierda
+        MergeSort(arreglo,ValorMedio+1,ultimo,num);//divide la derecha
+
+
+
+        Mezclar(arreglo,primero,ValorMedio,ultimo);//Se mezclan las mitades ya ordenadas
+
+        ImprimirHistograma(arreglo, num);
+
+    }
+}
+
+void Mezclar(int arreglo[], int primero, int medio, int ultimo)
+{
+    // 1. Determinar tamaños de los subarreglos
+    int n1 = medio - primero + 1; // Tamaño mitad izquierda
+    int n2 = ultimo - medio;      // Tamaño mitad derecha
+
+    // 2. Crear arreglos temporales
+    int L[n1], R[n2];
+
+    // 3. Copiar datos a los temporales
+    for(int i = 0; i < n1; i++)
+        L[i] = arreglo[primero + i];
+    for(int j = 0; j < n2; j++)
+        R[j] = arreglo[medio + 1 + j];
+
+    // 4. Fusionar los temporales en el arreglo original
+    int i = 0;    // Índice inicial del primer subarreglo
+    int j = 0;    // Índice inicial del segundo subarreglo
+    int k = primero; // Índice inicial del arreglo mezclado
+
+    while(i < n1 && j < n2)
+    {
+        if(L[i] <= R[j])
+        {
+            arreglo[k] = L[i];
+            i++;
+        }
+        else
+        {
+            arreglo[k] = R[j];
+            j++;
+        }
+        k++;
+    }
+
+    // 5. Copiar elementos restantes de L[] si los hay
+    while(i < n1)
+    {
+        arreglo[k] = L[i];
+        i++;
+        k++;
+    }
+
+    // 6. Copiar elementos restantes de R[] si los hay
+    while(j < n2)
+    {
+        arreglo[k] = R[j];
+        j++;
+        k++;
+    }
 }
