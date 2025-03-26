@@ -52,7 +52,13 @@ void seleccion(int data[], int num);
 void insercion(int data[], int num);
 
 //*********************************************************************************************************************************
-
+/**
+ * La función ShellSort implementa el algoritmo de ordenación Shell sort para ordenar un arreglo de enteros en C++.
+ *
+ * @param arreglo Arreglo de enteros que se desea ordenar mediante el algoritmo Shell Sort.
+ * @param n  Número de elementos en el arreglo `arreglo[]` que deben ser ordenados con Shell Sort.
+ */
+void ShellSort(int data[], int num);
 void ShellSort(int arreglo[], int n);
 
 //*********************************************************************************************************************************

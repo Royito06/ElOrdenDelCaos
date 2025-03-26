@@ -40,8 +40,6 @@
 		<Unit filename="MoverCursor.h" />
 		<Unit filename="Ordenamientos.cpp" />
 		<Unit filename="Ordenamientos.h" />
-		<Unit filename="VariabesGlobales.cpp" />
-		<Unit filename="VariablesGlobales.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

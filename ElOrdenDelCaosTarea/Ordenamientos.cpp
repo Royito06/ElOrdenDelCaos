@@ -1,7 +1,5 @@
 #include <iostream>
-
 #include "Capturas&Impresiones.h"
-#include "VariablesGlobales.h"
 #include "Ordenamientos.h"
 
 using std::cin;
@@ -10,7 +8,8 @@ using std::endl;
 using std::swap;
 
 //****************************************************************************************************************
-void bubble(int data[], int num) {
+void bubble(int data[], int num)
+{
     bool intercambiar;
     for (int i = 0; i < num; i++) {
         intercambiar = false;
@@ -27,13 +26,14 @@ void bubble(int data[], int num) {
 
 //****************************************************************************************************************
 
-void BubbleBidirecccional(int data[], int num) {
+void BubbleBidirecccional(int data[], int num)
+{
     int inicio = num - 1;  // Comienza desde el final
     int fin = 0;           // Termina en el inicio
-    int aux, nindice, nfin, ninicio, c = 0;
+    int aux, nfin, ninicio, c = 0;
 
-    while (inicio >= fin) {  // Cambia la condici�n a inicio >= fin
-        // Primera pasada: de inicio a fin (busca el n�mero m�s peque�o)
+    while (inicio >= fin) {  // Cambia la condicion a inicio >= fin
+        // Primera pasada: de inicio a fin (busca el numero mas pequeño)
         for (int i = inicio; i > fin; i--) {
             if (data[i] < data[i - 1]) {  // Cambia la comparaci�n a <
                 aux = data[i];
@@ -44,16 +44,16 @@ void BubbleBidirecccional(int data[], int num) {
             }
         }
         if (c == 0) {
-            break;  // Si no hubo intercambios, el array est� ordenado
+            break;  // Si no hubo intercambios, el array esta ordenado
         }
-        fin = nfin;  // Actualiza el l�mite inferior
+        fin = nfin;  // Actualiza el limite inferior
         c = 0;
 
         ImprimirHistograma(data,num);
 
-        // Segunda pasada: de fin a inicio (busca el n�mero m�s grande)
+        // Segunda pasada: de fin a inicio (busca el numero mas grande)
         for (int j = fin; j < inicio; j++) {
-            if (data[j] > data[j + 1]) {  // Cambia la comparaci�n a >
+            if (data[j] > data[j + 1]) {  // Cambia la comparacion a >
                 aux = data[j];
                 data[j] = data[j + 1];
                 data[j + 1] = aux;
@@ -62,9 +62,9 @@ void BubbleBidirecccional(int data[], int num) {
             }
         }
         if (c == 0) {
-            break;  // Si no hubo intercambios, el array est� ordenado
+            break;  // Si no hubo intercambios, el array esta ordenado
         }
-        inicio = ninicio;  // Actualiza el l�mite superior
+        inicio = ninicio;  // Actualiza el limite superior
         c = 0;
 
         ImprimirHistograma(data,num);
@@ -73,7 +73,8 @@ void BubbleBidirecccional(int data[], int num) {
 
 //****************************************************************************************************************
 
-void seleccion(int data[], int num) {
+void seleccion(int data[], int num)
+{
     int aux, min;
     for (int i = 0; i < num; i++) {
         min = i;
@@ -92,7 +93,8 @@ void seleccion(int data[], int num) {
 
 //****************************************************************************************************************
 
-void insercion(int data[], int num) {
+void insercion(int data[], int num)
+{
     int aux, b;
     for (int i = 0; i < num; i++) {
         b = i;
@@ -109,6 +111,18 @@ void insercion(int data[], int num) {
 //****************************************************************************************************************
 void ShellSort(int arreglo[], int n)
 {
+
+    for (int gap = n / 2; gap > 0; gap /= 2) {
+        for (int i = gap; i < n; i++) {
+            int temp = arreglo[i];
+            int j;
+            for (j = i; j >= gap && arreglo[j - gap] > temp; j -= gap) {
+                arreglo[j] = arreglo[j - gap];
+            }
+            arreglo[j] = temp;
+        }
+        ImprimirHistograma(arreglo, n);
+    }
 
 }
 //****************************************************************************************************************

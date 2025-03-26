@@ -7,4 +7,5 @@ void ImprimirHistograma(int arreglo[],int n);
 void ImprimirArreglos(int arreglo[], int n);
 
 
+
 #endif // CAPTURAS&IMPRESIONES_H_INCLUDED
